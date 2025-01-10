@@ -22,3 +22,4 @@ jobs:
         run: |
           export MY_HOST="${{ secrets.AKAMAI_INSTANCE_IP_ADDRESS }}"
           ssh root@$MY_HOST pwd
+          ssh root@$MY_HOST sudo apt update
