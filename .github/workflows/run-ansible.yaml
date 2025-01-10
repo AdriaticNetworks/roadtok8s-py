@@ -1,6 +1,7 @@
 name: Run Ansible
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   run-playbooks:
