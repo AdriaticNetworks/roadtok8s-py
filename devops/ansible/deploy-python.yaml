@@ -36,6 +36,13 @@
         - /opt/projects/roadtok8s/py/src/
         - /var/log/supervisor/roadtok8s/py/
 
+    - name: Print playbook_dir
+      debug:
+        msg: "playbook_dir: {{ playbook_dir }}"
+
+    - name: List content of src
+      command: "ls -l {{ playbook_dir }}/../../src/"
+
     - name: Copy FastAPI app to remote server
       synchronize:
         src: '{{ playbook_dir }}/../../src/'
