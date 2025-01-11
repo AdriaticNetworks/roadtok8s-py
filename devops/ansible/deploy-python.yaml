@@ -42,6 +42,7 @@
 
     - name: List content of playbook_dir
       command: "ls -l {{ playbook_dir }}"
+      delegate_to: localhost
 
     # - name: List content of src
     #   command: "ls -l {{ playbook_dir }}/../../src/"
