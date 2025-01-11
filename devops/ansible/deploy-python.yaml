@@ -40,8 +40,11 @@
       debug:
         msg: "playbook_dir: {{ playbook_dir }}"
 
-    - name: List content of src
-      command: "ls -l {{ playbook_dir }}/../../src/"
+    - name: List content of playbook_dir
+      command: "ls -l {{ playbook_dir }}"
+
+    # - name: List content of src
+    #   command: "ls -l {{ playbook_dir }}/../../src/"
 
     - name: Copy FastAPI app to remote server
       synchronize:
